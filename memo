@@ -1,0 +1,309 @@
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (main)
+$ git branch
+* main
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (main)
+$ git branch pr-uchida1512
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (main)
+$ git switch pr-uchida1512
+Switched to branch 'pr-uchida1512'
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ git branch
+  main
+* pr-uchida1512
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ python -c 'import this' > uchida1512.txt
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ cat uchida1512.txt
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ git status
+On branch pr-uchida1512
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+        uchida1512.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ git add uchida1512.txt
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ git status
+On branch pr-uchida1512
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   uchida1512.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ git branch
+  main
+* pr-uchida1512
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ git commit -m "ファイルをひとつだけコミット"
+[pr-uchida1512 3e4f3ed] ファイルをひとつだけコミット
+ 1 file changed, 21 insertions(+)
+ create mode 100644 uchida1512.txt
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ git status
+On branch pr-uchida1512
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ git remote -v
+origin  https://github.com/uchida1512/github-pr-sandbox (fetch)
+origin  https://github.com/uchida1512/github-pr-sandbox (push)
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ git remote add upstream https://github.com/mohira/github-pr-sandbox.git
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ git remote -v
+origin  https://github.com/uchida1512/github-pr-sandbox (fetch)
+origin  https://github.com/uchida1512/github-pr-sandbox (push)
+upstream        https://github.com/mohira/github-pr-sandbox.git (fetch)
+upstream        https://github.com/mohira/github-pr-sandbox.git (push)
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ git branch
+  main
+* pr-uchida1512
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (pr-uchida1512)
+$ git switch main
+Switched to branch 'main'
+A       memo
+Your branch is up to date with 'origin/main'.
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (main)
+$ git branch
+* main
+  pr-uchida1512
+
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (main)
+$ git merge upstream/main
+Updating 7863b02..aa7a272
+Fast-forward
+ .gitignore           |   2 +
+ egashira4282.txt     |   1 +
+ fukuda1156.txt       |   1 +
+ fukushima4287.txt    |   1 +
+ fumoto3602.txt       |   0
+ furukawa3152.txt     |  18 +++
+ furukawa3333.txt     |  17 ++
+ furutachi1454.txt    |   1 +
+ futami2437.txt       |   1 +
+ gotanda0002.txt      |   0
+ hashiguchi1544.txt   |  17 ++
+ hayashida3224.txt    |   1 +
+ hirao3258.txt        |   1 +
+ ikeda1177.txt        |   0
+ imamura1398.txt      |   1 +
+ ishibashi3146.txt    |   1 +
+ ito4231.txt          |   2 +
+ itoyamajimukyoku.txt |   1 +
+ kanasaki3405.txt     |   1 +
+ kawasaki2254.txt     |   1 +
+ kishikawa4024.txt    |   1 +
+ kobayashi3440.txt    |   1 +
+ koike4165.txt        |   1 +
+ koto3158.txt         |   0
+ kusuda2494.txt       |   1 +
+ lee4205.txt          | 450 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ makita2038.txt       |   7 +
+ matsuda1380.txt      |   1 +
+ matsue4692.txt       |   0
+ matsumoto1414.txt    |   1 +
+ matsuo4571.txt       |   1 +
+ matsuyama1217.txt    |   2 +
+ minekawa2542.txt     |   1 +
+ miyahara1005.txt     |   1 +
+ mohirasub.txt        |   1 +
+ mohirasub02.txt      |   1 +
+ mori3461.txt         |   1 +
+ morita4312.txt       |  15 ++
+ muraoka4443.txt      |   1 +
+ nagata4139.txt       |   0
+ nakano1350.txt       |   1 +
+ nakashima1084.txt    |   1 +
+ nishi3607.txt        |  17 ++
+ nishimura2009.txt    |  13 ++
+ nishiyama4477.txt    |   0
+ noda2421.txt         |   1 +
+ numata1132.txt       |   0
+ okamoto2706.txt      |   1 +
+ okuda1298.txt        |   4 +
+ okusa4717.txt        |   2 +
+ otsubo2497.txt       |   1 +
+ oya2166.txt          |   2 +
+ pr-miyazaki4322.txt  |   2 +
+ pr-sakamoto2381.txt  |   1 +
+ pr-shibuya3121.txt   |   1 +
+ sagapref0001.txt     |   1 +
+ sagapref0003.txt     |   1 +
+ sample.html          |  17 ++
+ sasayama4309.txt     |   1 +
+ sawada2310.txt       |   1 +
+ tabira2382.txt       |   1 +
+ tsutsui2402.txt      |   1 +
+ tsutsumi4645.txt     |   1 +
+ uchida1512.txt       |  21 +++
+ uematsu4486.txt      |   1 +
+ ushijima3062.txt     |   0
+ yahata1311.txt       |  61 +++++++
+ yamaguchi1083.txt    |   2 +
+ yamaguchi3053.txt    |   1 +
+ yamaguchi3215.txt    |   1 +
+ yamashita4140.txt    |   2 +
+ yokoo1574.txt        |   1 +
+ 72 files changed, 716 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 egashira4282.txt
+ create mode 100644 fukuda1156.txt
+ create mode 100644 fukushima4287.txt
+ create mode 100644 fumoto3602.txt
+ create mode 100644 furukawa3152.txt
+ create mode 100644 furukawa3333.txt
+ create mode 100644 furutachi1454.txt
+ create mode 100644 futami2437.txt
+ create mode 100644 gotanda0002.txt
+ create mode 100644 hashiguchi1544.txt
+ create mode 100644 hayashida3224.txt
+ create mode 100644 hirao3258.txt
+ create mode 100644 ikeda1177.txt
+ create mode 100644 imamura1398.txt
+ create mode 100644 ishibashi3146.txt
+ create mode 100644 ito4231.txt
+ create mode 100644 itoyamajimukyoku.txt
+ create mode 100644 kanasaki3405.txt
+ create mode 100644 kawasaki2254.txt
+ create mode 100644 kishikawa4024.txt
+ create mode 100644 kobayashi3440.txt
+ create mode 100644 koike4165.txt
+ create mode 100644 koto3158.txt
+ create mode 100644 kusuda2494.txt
+ create mode 100644 lee4205.txt
+ create mode 100644 makita2038.txt
+ create mode 100644 matsuda1380.txt
+ create mode 100644 matsue4692.txt
+ create mode 100644 matsumoto1414.txt
+ create mode 100644 matsuo4571.txt
+ create mode 100644 matsuyama1217.txt
+ create mode 100644 minekawa2542.txt
+ create mode 100644 miyahara1005.txt
+ create mode 100644 mohirasub.txt
+ create mode 100644 mohirasub02.txt
+ create mode 100644 mori3461.txt
+ create mode 100644 morita4312.txt
+ create mode 100644 muraoka4443.txt
+ create mode 100644 nagata4139.txt
+ create mode 100644 nakano1350.txt
+ create mode 100644 nakashima1084.txt
+ create mode 100644 nishi3607.txt
+ create mode 100644 nishimura2009.txt
+ create mode 100644 nishiyama4477.txt
+ create mode 100644 noda2421.txt
+ create mode 100644 numata1132.txt
+ create mode 100644 okamoto2706.txt
+ create mode 100644 okuda1298.txt
+ create mode 100644 okusa4717.txt
+ create mode 100644 otsubo2497.txt
+ create mode 100644 oya2166.txt
+ create mode 100644 pr-miyazaki4322.txt
+ create mode 100644 pr-sakamoto2381.txt
+ create mode 100644 pr-shibuya3121.txt
+ create mode 100644 sagapref0001.txt
+ create mode 100644 sagapref0003.txt
+ create mode 100644 sample.html
+ create mode 100644 sasayama4309.txt
+ create mode 100644 sawada2310.txt
+ create mode 100644 tabira2382.txt
+ create mode 100644 tsutsui2402.txt
+ create mode 100644 tsutsumi4645.txt
+ create mode 100644 uchida1512.txt
+ create mode 100644 uematsu4486.txt
+ create mode 100644 ushijima3062.txt
+ create mode 100644 yahata1311.txt
+ create mode 100644 yamaguchi1083.txt
+ create mode 100644 yamaguchi3053.txt
+ create mode 100644 yamaguchi3215.txt
+ create mode 100644 yamashita4140.txt
+ create mode 100644 yokoo1574.txt
+
+
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (main)
+$ git log --oneline
+aa7a272 (HEAD -> main, upstream/main) Merge pull request #72 from nakashima1084/pr-nakashima1084
+2574df0 Merge pull request #71 from okusa4717/pr-okusa4717
+75f585a nakashima1084_commit
+c270d84 okusa4717 add
+c5d8300 okusa4717 add
+c4c3e8f Merge pull request #70 from hirao3258/pr-hirao3258
+4bf1e4f Merge pull request #69 from mori3461/pr-mori3461
+aab6274 Merge pull request #69 from mori3461/pr-mori3461
+48abb3e Merge pull request #68 from nishiyama4477/pr-nishiyama4477
+07e8c60 mori3461<E3><81><8B><E3><82><89><E3><81><AE><E3><82><B3><E3><83><9F><E3><83><83><E3><83><88><E3><81><A3><E3><81><99><C3><A2>
+3b4de88 <E3><82><B3><E3><83><9F><E3><83><83><E3><83><88><E3><81><97><E3><81><BE><E3><81><97><E3><81><9F>
+2841703 <E3><82><B3><E3><83><9F><E3><83><83><E3><83><88><E3><81><97><E3><81><9F>
+
+
+a@DESKTOP-M8KF2FB MINGW64 ~/PycharmProjects/pythonProject/github-pr-sandbox (main)
+$ git push origin main
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': uchida1512
+Password for 'https://uchida1512@github.com':
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/uchida1512/github-pr-sandbox
+   7863b02..aa7a272  main -> main
